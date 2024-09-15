@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantio de Frutas - Gestão de Estoque</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Plantio de Frutas</h1>
+        <p>Sistema de Gestão de Estoque</p>
+    </header>
+
+    <main>
+        <!-- Seção de adição de frutas -->
+        <section id="estoque">
+            <h2>Adicionar Fruta ao Estoque</h2>
+            <form id="form-fruta">
+                <label for="nome">Nome da Fruta:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+
+                <button type="submit">Adicionar ao Estoque</button>
+            </form>
+        </section>
+
+        <!-- Seção de busca -->
+        <section id="pesquisa-fruta">
+            <h2>Buscar no Estoque</h2>
+            <input type="text" id="pesquisa" placeholder="Buscar fruta...">
+        </section>
+
+        <!-- Seção de relatório de estoque -->
+        <section id="relatorio-estoque">
+            <h2>Estoque Atual</h2>
+            <ul id="lista-estoque">
+                <!-- Lista de frutas aparecerá aqui -->
+            </ul>
+        </section>
+
+        <!-- Seção para exibir gráficos de estoque -->
+        <section id="grafico">
+            <h2>Gráfico do Estoque</h2>
+            <canvas id="graficoEstoque"></canvas>
+        </section>
+
+        <!-- Seção de histórico de movimentações -->
+        <section id="historico">
+            <h2>Histórico de Movimentações</h2>
+            <ul id="historico-estoque"></ul>
+        </section>
+
+        <!-- Botão para exportar o estoque -->
+        <button onclick="exportarCSV()">Exportar Estoque para CSV</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Controle do Plantio de Frutas</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
